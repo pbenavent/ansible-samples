@@ -1,0 +1,25 @@
+---
+  - name: Playbook para instalar apache2 en RaspberryPi
+    hosts: raspberry
+    gather_facts: no
+    tasks:
+      - name: Instalando Apache 2 en Raspberry
+        apt:
+          name: apache2
+          state: latest
+      - name: Iniciar Apache 2 post instalacion pero predeterminarlo en arranque
+        service:
+          name: apache2
+          state: stopped
+      - name: Crear pagina index
+        copy:
+          content: "Pagina de inicio creada desde Ansible"
+          dest: /var/www/html/index.html
+          mode: 0644
+      - name: Modificando index.html
+        lineinfile:
+          path: /var/www/html/index.html
+          regexp: 'Single line'
+          line: 'Wellcome dude'
+ 
+...

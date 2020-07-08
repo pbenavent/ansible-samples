@@ -1,0 +1,9 @@
+---
+- hosts: raspberry
+  gather_facts: no
+  tasks:
+    - name: Desinstalar apache2
+      apt:
+        name: apache2
+        state: absent
+...

@@ -1,0 +1,7 @@
+---
+- hosts: raspberry
+  tasks:
+    - name: Install figlet
+      apt:
+        name: figlet
+...

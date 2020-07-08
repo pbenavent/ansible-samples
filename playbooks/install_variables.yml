@@ -1,0 +1,16 @@
+---
+- name: Instalar con variables
+  hosts: raspberry
+  vars_files:
+    - variables.yml
+  tasks:
+    - name: Instalar  {{ db_pkg }}
+      apt:
+        name: "{{ db_pkg }}"
+        state: latest
+    - name: Iniciando {{ db_srv }}
+      service:
+        name: "{{ db_srv }}"
+        state: stopped
+        enabled: no
+...

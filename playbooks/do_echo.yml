@@ -1,0 +1,9 @@
+---
+- hosts: raspberry,!kali
+  tasks:
+    - name: Hacer echo
+      shell:
+        cmd: echo {{item}}
+      with_items:
+        - raspberry
+...

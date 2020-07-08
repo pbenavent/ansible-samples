@@ -1,0 +1,8 @@
+---
+- hosts: raspberry
+  tasks:
+    - name: uninstall figlet
+      apt:
+        name: figlet
+        state: absent
+...
