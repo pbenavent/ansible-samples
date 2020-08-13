@@ -1,0 +1,9 @@
+---
+  - hosts: raspberry
+    tasks: 
+    - name: anyadir
+      user:
+        name: pi
+        append: yes
+        groups: 106,1301
+...
