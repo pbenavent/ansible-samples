@@ -1,0 +1,11 @@
+---
+  - hosts: raspberry
+    vars_files:
+      - ../variables/variables.yml
+    tasks: 
+    - name: anyadir
+      user:
+        name: "{{clearcase_user}}"
+        append: yes
+        groups: clear,case,rational
+...
