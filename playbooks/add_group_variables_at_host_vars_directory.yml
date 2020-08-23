@@ -1,0 +1,9 @@
+---
+  - hosts: raspberry
+    tasks: 
+    - name: anyadir
+      user:
+        name: "{{clearcase_user}}"
+        append: yes
+        groups: "{{clearcase_groups}}"
+...

@@ -1,0 +1,9 @@
+---
+  - hosts: raspberry
+    tasks: 
+    - name: anyadir grupos utilizando variables
+      user:
+        name: "{{clearcase_user}}"
+        append: yes
+        groups: "{{clearcase_groups}}"
+...
