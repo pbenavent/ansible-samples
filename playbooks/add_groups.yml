@@ -1,0 +1,13 @@
+---
+- hosts: raspberry
+  gather_facts: no
+  vars_files:
+    - ../group_vars/vars.yml
+
+
+  tasks:
+    - debug:
+        msg: |
+             Grupos a los que se anyaden al usuario: {{ clearcase_groups }}
+             Usuario a los que se anyaden los grupos: {{ clearcase_user }}
+...

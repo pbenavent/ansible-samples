@@ -1,0 +1,10 @@
+---
+# Here we collect GID for the groups to be added to a certain user
+# 1002 - rational group
+# 1003 - clear group
+# 1004 - clase group
+# groups_to_add: 1002,1003,1004
+
+clearcase_user: pi,user1,user2,user3
+clearcase_groups: clear,case,rational
+...
